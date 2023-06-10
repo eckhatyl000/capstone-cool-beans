@@ -15,4 +15,4 @@ jobs:
 
       - name: Deploy code to EC2
         run: |
-          ssh -i /home/ec2-user/.ssh/id_rsa.pub ec2-user@54.188.100.105 "cd C:\Users\Ty-Ty\OneDrive\Desktop\DND_BETTER MANAGE && git pull"
+          ssh -i /home/ec2-user/.ssh/id_rsa.pub ec2-user@54.188.100.105 "cd /home/ec2-user/.ssh/id_rsa && git pull"
