@@ -1,0 +1,18 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy code to EC2
+        run: |
+          ssh -i /home/ec2-user/.ssh/id_rsa.pub ec2-user@54.188.100.105 "cd C:\Users\Ty-Ty\OneDrive\Desktop\DND_BETTER MANAGE && git pull"
